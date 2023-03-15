@@ -10,7 +10,7 @@
     src: url(/font/FerroRosso.TTF);
 }
 */
-@font-face { font-family: "FerroRosso"; src: url('/font/FerroRosso.ttf'); } 
+@font-face { font-family: "FerroRosso"; src: url('../font/FerroRosso.ttf'); } 
 
 
 #logo{
@@ -26,11 +26,157 @@
 
 header {
     background-color: rgb(255, 40, 0);
+
 }
 
 nav{
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    height: 100px;
+    height: 0px;
+
 }
+
+
+#link_list {
+    background-color: rgb(149, 0, 0);
+    height: 400px;
+    width: 200px;
+    position: absolute;
+    top: -400px;
+    right: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transition: all;
+    list-style-type: none;
+    color: blueviolet;
+}
+
+#link_list li {
+    list-style: none;
+}
+
+#burger {
+    height: 250px;
+    margin-right: 50px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.link_list_visible {
+    transform: translateY(500px);
+}
+
+.burger_in_x_form #burger_line_2 {
+    opacity: 0;
+
+}
+
+.burger_in_x_form #burger_line_1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.burger_in_x_form #burger_line_3 {
+    transform: rotate(45deg) translate(-5px, -6px);;
+}
+
+#burger div {
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    margin: 5px;
+    border-radius: 20%;
+}
+
+.pic1 { grid-area: se1;}
+.pic2 { grid-area: se2;}
+.pic3 { grid-area: se3;}
+.pic4 { grid-area: se4;}
+.pic5 { grid-area: se5;}
+
+.pic1, .pic2, .pic3, .pic4, .pic5, .pic6 {
+text-align: center;
+padding: 10px;
+}
+
+.pic1 {
+    background-image: url("../img/adrian-n-o23qzl3obeI-unsplash.jpg");
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 6;
+    background-size: cover;
+    background-position: center;
+
+}
+
+.pic2 {
+    background-image: url("../img/hakon-sataoen-XFiY4FZj8ZE-unsplash.jpg");
+    grid-column-start: 3;
+    grid-column-end: 7;
+    grid-row-start: 9;
+    grid-row-end: 4;
+    background-size: cover;
+    background-position: center;
+
+}
+
+.pic3 {
+    background-image: url("../img/jannis-lucas-jBmNhftLcrY-unsplash.jpg");
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 4;
+    background-size: cover;
+    background-position: center;
+
+}
+
+.pic4 {
+    background-image: url("../img/martin-katler-whuGe0sAGyQ-unsplash.jpg");
+    grid-column-start: 5;
+    grid-column-end: 7;
+    grid-row-start: 1;
+    grid-row-end: 4;
+    background-size: cover;
+    background-position: center;
+
+}
+
+.pic5 {
+    background-image: url("../img/mpumelelo-macu-dnt63Yoot60-unsplash.jpg");
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 6;
+    grid-row-end: 9;
+    background-size: cover;
+    background-position: center;
+
+}
+
+.pic6 {
+    background-image: url("../img/daniel-minarik-yuooizjwQeo-unsplash.jpg");
+    grid-column-start: 7;
+    grid-column-end: 9;
+    grid-row-start: 1;
+    grid-row-end: 9;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.wrapper {
+    display: grid;
+  /*  grid-template-areas: 
+    "se1 se1"
+    "se2 se2" 
+    "se3 se3"
+    "se4 se4"
+    "se5 se5";
+    border: 1px black solid;*/
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 5vw);
+}
+
